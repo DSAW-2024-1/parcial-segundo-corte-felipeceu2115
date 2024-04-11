@@ -59,3 +59,11 @@ Lista de nombres de la clase:
 | TAMAYO LOPEZ, MARIA FERNANDA |
 | URREA LARA, DEIVID NICOLAS   |
 | AZCONA, ANDRÉS                |
+
+## Juan Felipe Cepeda U.
+
+## Link de despligue
+parcial-segundo-corte-felipeceu2115.vercel.app
+
+### Token de autorización 
+LqHCcneLuxltyuUq0NsctoWd

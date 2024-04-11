@@ -31,3 +31,21 @@ const usuarios = [
   { nombre: 'Deivid Nicolás', apellido: 'Urrea Lara' },
   { nombre: 'Andrés', apellido: 'Azcona' }
 ];
+
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  let count = req.query.count || usuarios.length;
+  const sort = req.query.sort || 'ASC';
+  let sortedUsers = [...usuarios];
+
+  if (sort === 'ASC') {
+    sortedUsers.sort((a, b) => a.apellido.localeCompare(b.apellido));
+  } else if (sort === 'DESC') {
+    sortedUsers.sort((a, b) => b.apellido.localeCompare(a.apellido));
+  }
+
+  const filtroUsuarios = sortedUsers.slice(0, Number(count));
+
+  res.send(filtroUsuarios);
+});

@@ -49,3 +49,21 @@ router.get('/', (req, res) => {
 
   res.send(filtroUsuarios);
 });
+
+router.post('/', (req, res) => {
+    const { nombre, apellido, correo, ciudad = 'Bogotá', pais = 'Colombia' } = req.body;
+  
+    const nuevoUsuario = {
+      nombre,
+      apellido,
+      correo,
+      ciudad,
+      pais,
+    };
+  
+    usuarios.push(nuevoUsuario);
+  
+    res.send(nuevoUsuario);
+  });
+  
+  export default router;
